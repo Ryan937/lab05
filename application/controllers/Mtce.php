@@ -7,7 +7,7 @@
  */
 
 class Mtce extends Application {
-	private $items_per_page = 10;
+    private $items_per_page = 10;
 
     public function index()
     {
@@ -18,8 +18,8 @@ class Mtce extends Application {
 
 	private function show_page($tasks)
 	{
-
-        $this->data['pagetitle'] = 'TODO List Maintenance';
+        $role = $this->session->userdata('userrole');
+        $this->data['pagetitle'] = 'TODO List Maintenance ('. $role . ')';
         // build the task presentation output
         $result = ''; // start with an empty array
         // substitute the status name
@@ -51,21 +51,21 @@ class Mtce extends Application {
     			$tasks[] = $task;
     			$count++;
     		}
-    		if ($count >= $this->items_per_page - 1) break;
+    		if ($count >= $this->items_per_page) break;
     	}
     	$this->data['pagination'] = $this->pagenav($num);
-    	$this->show_page($tasks);
+        $this->show_page($tasks);
     }
 
     // build pagination navbar
     private function pagenav($num) {
-    	$lastpage = ceil($this->tasks->size() / $this->items_per_page);
-    	$parms = array(
-    		'first' => 1,
-    		'previous' => (max($num-1, 1)),
-    		'next' => min($num+1, $lastpage),
-    		'last' => $lastpage
-    	);
-    	return $this->parser->parse('itemnav', $parms, true);
+        $lastpage = ceil($this->tasks->size() / $this->items_per_page);
+        $parms = array(
+            'first' => 1,
+            'previous' => (max($num-1,1)),
+            'next' => min($num+1,$lastpage),
+            'last' => $lastpage
+        );
+        return $this->parser->parse('itemnav',$parms,true);
     }
 }
