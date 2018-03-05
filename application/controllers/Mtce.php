@@ -40,7 +40,7 @@ class Mtce extends Application {
         $this->render();
     }
 
-/////test
+//TEST3
 	// Extract & handle a page of items, defaulting to the beginning
     function page($num = 1)
     {
