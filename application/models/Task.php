@@ -22,7 +22,9 @@ class Task extends Entity {
             throw new Exception('Priority must be numeric');
         if ($value > 4)
             throw new Exception('Priority must be less than 4');
-        $this->priority = $priority;
+        if ($value < 0)
+            throw new Exception('Priority must be positive');
+        $this->priority = $value;
         return $this;
     }
 
@@ -32,17 +34,21 @@ class Task extends Entity {
             throw new Exception('Size must be numeric');
         if ($value > 4)
             throw new Exception('Size must be less than 4');
-        $this->size = $size;
+        if ($value < 0)
+            throw new Exception('Size must be positive');
+        $this->size = $value;
         return $this;
     }
 
     // insist that a Group be a positive number, and less than 5
-    public function setSize($value) {
+    public function setGroup($value) {
         if (!is_numeric($value))
             throw new Exception('Group must be numeric');
         if ($value > 5)
             throw new Exception('Group must be less than 5');
-        $this->group = $group;
+        if ($value > 5)
+            throw new Exception('Group must be positive');
+        $this->group = $value;
         return $this;
     }
 }
