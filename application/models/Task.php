@@ -46,9 +46,11 @@ class Task extends Entity {
             throw new Exception('Group must be numeric');
         if ($value > 5)
             throw new Exception('Group must be less than 5');
-        if ($value > 5)
+        if ($value < 0)
             throw new Exception('Group must be positive');
         $this->group = $value;
         return $this;
     }
+
+
 }

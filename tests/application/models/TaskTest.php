@@ -35,6 +35,12 @@ class TaskTest extends TestCase
         $this->assertEquals($expected, $this->item->task);
     }
 
+    function testValidLengthTask() {
+        $badvalue = "some task that are longer than length 64 stuffing stuffing stuffing stuffing stuffing stuffing stuffing stuffing stuffing stuffing stuffing stuffing stuffing stuffing stuffing stuffing";
+        $this->expectException(Exception::class);
+        $this->item->task = $badvalue; // this should croak
+    }
+
     /**
      * This is an alternate way to assert that an exception should occur
      * @expectedException InvalidArgumentException
@@ -66,25 +72,52 @@ class TaskTest extends TestCase
         $badvalue = 5;
         $this->expectException(Exception::class);
         $this->item->priority = $badvalue; // this should croak
-        $badvalue = -0;
+    }
+
+    function testInvalidNegativePriority() {
+        $badvalue = -1;
         $this->expectException(Exception::class);
         $this->item->priority = $badvalue; // this should croak
     }
 
-    function testnvalidSize() {
+    function testInvalidNonNumericPriority() {
+        $badvalue = "someText";
+        $this->expectException(Exception::class);
+        $this->item->priority = $badvalue; // this should croak
+    }
+
+    function testIvalidSize() {
         $badvalue = 10;
         $this->expectException(Exception::class);
         $this->item->size = $badvalue; // this should croak
+    }
+
+    function testInvalidNegativeSize() {
         $badvalue = -1;
         $this->expectException(Exception::class);
         $this->item->size = $badvalue; // this should croak
     }
 
-    function testnvalidGroup() {
+    function testInvalidNonNumericSize() {
+        $badvalue = "someText";
+        $this->expectException(Exception::class);
+        $this->item->size = $badvalue; // this should croak        
+    }
+
+    function testIvalidGroup() {
         $badvalue = 10;
         $this->expectException(Exception::class);
         $this->item->group = $badvalue; // this should croak
+    }
+
+    function testInvalideNegativeGroup() {
         $badvalue = -1;
+        $this->expectException(Exception::class);
+        $this->item->group = $badvalue; // this should croak
+    }
+
+    function testInvalideNonNumericGroup() {
+        $badvalue = "someText";
         $this->expectException(Exception::class);
         $this->item->group = $badvalue; // this should croak
     }
