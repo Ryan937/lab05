@@ -19,4 +19,6 @@ Completed role-specific maintenance list
 Completed task item maintenance
 Added group, size, and status to maintenance
 Finished unit testing primer
-created getter and setter for task
+Created getter and setter for task
+Completed task test and tasklist tasks
+Generated code coverage report
