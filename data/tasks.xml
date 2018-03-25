@@ -4,8 +4,9 @@ To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
 and open the template in the editor.
 -->
-<task>
-    <task id="1">
+<tasks>
+    <task>
+        <id>1</id>
         <desc>COMP1234 assignment</desc>
         <priority>3</priority>
         <size>2</size>
@@ -15,7 +16,8 @@ and open the template in the editor.
         <flag></flag>
     </task>
 
-    <task id="2">
+    <task>
+        <id>2</id>
         <desc>Mow the lawn</desc>
         <priority>2</priority>
         <size>2</size>
@@ -25,7 +27,8 @@ and open the template in the editor.
         <flag></flag>
     </task>
 
-    <task id="3">
+    <task>
+        <id>3</id>
         <desc>Wash the car</desc>
         <priority>2</priority>
         <size>2</size>
@@ -35,7 +38,8 @@ and open the template in the editor.
         <flag></flag>
     </task>
 
-    <task id="4">
+    <task>
+        <id>4</id>
         <desc>Paint the fence</desc>
         <priority>1</priority>
         <size>2</size>
@@ -45,7 +49,8 @@ and open the template in the editor.
         <flag></flag>
     </task>
 
-    <task id="6">
+    <task>
+        <id>6</id>
         <desc>Intramural hockey game</desc>
         <priority>1</priority>
         <size>2</size>
@@ -55,7 +60,8 @@ and open the template in the editor.
         <flag></flag>
     </task>
 
-    <task id="7">
+    <task>
+        <id>7</id>
         <desc>Canucks hockey game</desc>
         <priority>3</priority>
         <size>3</size>
@@ -65,7 +71,8 @@ and open the template in the editor.
         <flag></flag>
     </task>
 
-    <task id="8">
+    <task>
+        <id>8</id>
         <desc>Buy steel-toed boots</desc>
         <priority>2</priority>
         <size>1</size>
@@ -75,7 +82,8 @@ and open the template in the editor.
         <flag></flag>
     </task>
 
-    <task id="9">
+    <task>
+        <id>9</id>
         <desc>Learn French</desc>
         <priority>1</priority>
         <size>3</size>
@@ -85,7 +93,8 @@ and open the template in the editor.
         <flag></flag>
     </task>
 
-    <task id="10">
+    <task>
+        <id>10</id>
         <desc>Hit the gym</desc>
         <priority>2</priority>
         <size>1</size>
@@ -95,7 +104,8 @@ and open the template in the editor.
         <flag></flag>
     </task>
 
-    <task id="11">
+    <task>
+        <id>11</id>
         <desc>Pay bills</desc>
         <priority>3</priority>
         <size>1</size>
@@ -105,7 +115,8 @@ and open the template in the editor.
         <flag></flag>
     </task>
 
-    <task id="12">
+    <task>
+        <id>12</id>
         <desc>Meet George</desc>
         <priority>2</priority>
         <size>1</size>
@@ -115,7 +126,8 @@ and open the template in the editor.
         <flag></flag>
     </task>
 
-    <task id="13">
+    <task>
+        <id>13</id>
         <desc>Buy milk and bread</desc>
         <priority>2</priority>
         <size>1</size>
@@ -125,7 +137,3 @@ and open the template in the editor.
         <flag>1</flag>
     </task>
 </tasks>
-
-<root>
-    
-</root>
